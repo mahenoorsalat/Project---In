@@ -1,5 +1,5 @@
 import React from 'react'
-import asadImg from './assets/asad-candid.jpg'
+import asadImg from '../assets/asad-candid.jpg'
 
 const Home = () => {
   return (
