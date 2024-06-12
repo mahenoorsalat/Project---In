@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='text-black   '>
+      <div className='text-black sticky top-0 bg-white z-10 '>
         <h1 className='mx-5 text-sm font-semibold hover:text-red-400'>Mahi's Resume</h1>
         <nav>
           <ul className='flex mx-7 justify-end ' >
