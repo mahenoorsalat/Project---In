@@ -15,7 +15,7 @@ const Home = () => {
      
       </div> 
 
-      {/* this div you can comment it ,after settling frame uncomment it okay I just prepare to make it easy for you if you like anything to add in these you can add in it , senior!*/}
+      {/* this div you can comment it ,after settling frame uncomment it okay I just prepare to make it easy for you if you like anything to add in these , then you can add in it , senior!*/}
       <div className = "p-24">
 
       <h1 className='text-black font-medium font-serif  text-5xl text-center' >Hello!</h1>
