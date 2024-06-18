@@ -1,34 +1,28 @@
-import React from 'react'
-import asadImg from '../assets/asad-candid.jpg'
+import React from 'react';
+import profileImg from '../assets/profile.png';
 
 const Home = () => {
   return (
-    <>
-    <div className="container flex">
-  
-    <div className='w-[500px] h-[500px] bg-red-400 flex justify-center rounded-2xl '>
-       <div className='flex justify-center w-80 h-80 bg-red-400 m-24 space-x-56 shadow-2xl rounded-full'>
-        <img
-        className='shadow-2xl w-full h-full rounded-full '
-        src={asadImg} alt="Done" />
-       </div>
-     
-      </div> 
+    <div className="container mt-9 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col sm:flex-row items-center sm:justify-between">
+        <div className="w-full sm:w-1/2">
+          <div className="w-80 h-80 sm:w-96 sm:h-96 bg-slate-900 flex justify-center items-center rounded-full shadow-2xl mx-auto mb-8 sm:mb-0">
+            <img className="w-full h-full rounded-full" src={profileImg} alt="Asad" />
+          </div>
+        </div>
 
-      {/* this div you can comment it ,after settling frame uncomment it okay I just prepare to make it easy for you if you like anything to add in these , then you can add in it , senior!*/}
-      <div className = "p-24">
-
-      <h1 className='text-black font-medium font-serif  text-5xl text-center' >Hello!</h1>
-      <p className='text-center py-6'>Explore this Portfolio Now! To see Who I am and What I do!</p>
-      <button className='mx-28 my-4 p-7 py-1 text-center align-middle  bg-red-400 text-white rounded-3xl hover:bg-white hover:text-red-400 '>Resume</button>
-      <button className='p-7 py-1 text-center align-middle  bg-red-400 text-white  rounded-3xl hover:bg-white hover:text-red-400'>Hire me</button>
-      
-      <p>In this portfolio, you'll discover the creative world of a Developement, where Coding and Designning comes together. so , Join me on a journey! Reach me out now!</p>
-    
+        <div className="w-full sm:w-1/2 flex flex-col justify-center">
+          <h1 className="text-black font-medium font-serif text-5xl text-center mb-4">Hello!</h1>
+          <p className="text-center mb-6">Explore this Portfolio Now! To see Who I am and What I do!</p>
+          <div className="flex justify-center space-x-4 mb-6">
+            <button className="hover:-translate-x-1 hover:scale-110 duration-300 p-3 px-6  py-1 text-center align-middle bg-slate-900 text-white rounded-3xl hover:bg-white hover:text-slate-900">Resume</button>
+            <button className="hover:-translate-x-1 hover:scale-110 duration-300 p-3 px-6  py-1 text-center align-middle bg-slate-900 text-white rounded-3xl hover:bg-white hover:text-slate-900">Hire me</button>
+          </div>
+          <p className="text-center">In this portfolio, you'll discover the creative world of a Development, where Coding and Designing come together. Join me on a journey! Reach me out now!</p>
+        </div>
       </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

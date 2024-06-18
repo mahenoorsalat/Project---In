@@ -4,59 +4,72 @@ const Contact = () => {
   const [showMessage, setShowMessage] = useState(false);
 
   const onClick = () => {
-    // I  Set the showMessage state to true when the button is clicked
     setShowMessage(true);
 
-    // I set timeout here but it didnot stay for longtime as I want user to see it properly so run some js in it
     setTimeout(() => {
       setShowMessage(false);
-    }, 30000);
+    }, 6000);
   };
+
   return (
-    <div className=" w-full h-full bg-red-200 pt-7 py-7">
-
-
-
-      <div className="w-20% h-50% justify-center text-center bg-white m-6 text-red-400 mx-80 space-y-3 align-middle pt-6 flex rounded-2xl hover:shadow-lg hover:transition-all hover:duration-5s ">
-
-        <form className='text-center mt-14 ' action="">
-
-          {/* for name */}
+    <div className="container mx-auto px-4 sm:px-6 py-12 bg-slate-800">
+      <div className="max-w-3xl mx-auto bg-white text-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-8">
+        <form className="text-center mt-8">
+          {/* Name */}
           <div className="mb-4">
-            <label className="block text-red-400 font-serif text-lg font-bold mb-2" for="username">
+            <label htmlFor="name" className="block text-lg font-bold font-serif mb-2">
               Name
             </label>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter Your Name" />
-
+            <input
+              type="text"
+              id="name"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter Your Name"
+            />
           </div>
 
-          {/* for email */}
-
+          {/* Email */}
           <div className="mb-4">
-            <label className="block text-red-400 font-serif text-lg font-bold mb-2" for="username">
+            <label htmlFor="email" className="block text-lg font-bold font-serif mb-2">
               Email
             </label>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Enter Your Email" />
-
-            </div>
-
-            {/* for message */}
-          
-          <div className="mb-4">
-
-            <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" id="message" placeholder='Enter Your Message Here :)'></textarea>
-
+            <input
+              type="email"
+              id="email"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter Your Email"
+            />
           </div>
 
+          {/* Message */}
+          <div className="mb-4">
+            <label htmlFor="message" className="block text-lg font-bold font-serif mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter Your Message Here :)"
+              rows="4"
+            ></textarea>
+          </div>
 
-          <button className='mx-28 my-4 p-7 py-1 text-center align-middle  bg-red-400 text-white rounded-3xl hover:bg-white hover:text-red-400  ' onClick={onClick}>Submit</button>
-          {showMessage && <p>Thanks for your message! Have A Great Day!</p>}
-          
+          {/* Submit Button */}
+          <button
+            className="hover:-translate-x-1 hover:scale-110 duration-300 mx-auto mt-4 p-4 text-center align-middle bg-slate-800 text-white rounded-full hover:bg-white hover:text-slate-800"
+            onClick={onClick}
+          >
+            Submit
+          </button>
+
+          {/* Confirmation Message */}
+          {showMessage && (
+            <p className="mt-4 text-center text-slate-800 font-bold">Thanks for your message! Have A Great Day!</p>
+          )}
         </form>
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default Contact
+export default Contact;

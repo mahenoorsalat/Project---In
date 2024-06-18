@@ -1,69 +1,48 @@
-import React from 'react'
-import webImage from '../assets/web.jpg'
-import designImg from '../assets/design.jpg'
-import EditImg from '../assets/Editor.jpg'
-
+import React from 'react';
+import webImage from '../assets/web.jpg';
+import designImg from '../assets/design.jpg';
+import EditImg from '../assets/Editor.jpg';
 
 const About = () => {
   return (
-    <>
-
-
-      {/* see the last img but the first image didnot hold position like last one adjust  it to look exactly in position like last image */}
-
-
-      
-      <div className=" w-full h-full bg-red-200 pt-7 py-7">
-
-        {/* web developement */}
-
-        <div className="w-20% h-50% justify-center text-center bg-white text-red-400 mx-48 space-y-3 align-middle pt-6 flex rounded-2xl hover:shadow-lg hover:transition-all hover:duration-5s ">
-
-          <div>
-            <h1 className="italic font-bold bd-red-100 text-4xl font-serif">Web Developer</h1>
-            <p className='m-5'>Web Development,Proficient in HTML, CSS ,  JavaScript , CSS Tailwind , React js , Next js to build responsive and dynamic websites. Skilled in both designing and developing that are user-friendly and aesthetically pleasing. As a Front-end Developer, I thrive on the creative process of turning ideas into visually stunning and interactive digital experiences. With a strong foundation in we development technologies and a passion for clean, efficient code, I am dedicated to crafting engaging user interfaces that seamlessly blend form and function. Constantly seeking to stay updated with the latest industry trends and best practices, I am committed to delivering high-quality solutions that exceed expectations and drive user satisfaction.</p>
-
+    <div className="container mx-auto sm:px-6 py-12 bg-slate-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Web Development */}
+        <div className="bg-white text-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          <div className="h-64 bg-slate-200 rounded-t-2xl overflow-hidden">
+            <img src={webImage} alt="Web Development" className="w-full h-full object-cover" />
           </div>
-          <div className='my-10 w-full h-full  pr-16  bg-red-200 border-red-300 hover:shadow-lg hover:transition-all hover:duration-5s'>
-            <img src={webImage} alt="Development" />
+          <div className="p-6">
+            <h1 className="italic font-bold text-4xl font-serif mb-4">Web Developer</h1>
+            <p className="mb-4">Web Development, proficient in HTML, CSS, JavaScript, Tailwind CSS, React.js, and Next.js to build responsive and dynamic websites.</p>
+            <p className="mb-4">Skilled in designing and developing user-friendly and aesthetically pleasing websites. Passionate about crafting engaging user interfaces with clean and efficient code.</p>
           </div>
-
         </div>
 
-
-        {/*designer */}
-
-        <div className="w-20% h-50% justify-center text-center m-9 bg-white text-red-400 mx-48 space-y-3 align-middle pt-6 flex rounded-2xl hover:shadow-lg hover:transition-all hover:duration-5s">
-
-          <div>
-            <h1 className="italic font-bold bd-red-100 text-4xl font-serif">Designer</h1>
-            <p className='m-5'>Logo Design, I can boost your company’s brand identity by designing a unique and memorable logo. I can also make application design that are able to eye catch the customer as I have the experience of it. as a UI / UX Designer I can create a user - centered design approach , I craft visually stunning and intuitively functional interfaces that enhance user experience and drive engagement,ensuring your digital product not only looks amazing but also perform seamlessly</p>
-
+        {/* Designer */}
+        <div className="bg-white text-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          <div className="h-64 bg-slate-200 rounded-t-2xl overflow-hidden">
+            <img src={designImg} alt="Designer" className="w-full h-full object-cover" />
           </div>
-          <div className='w-full h-full  pr-16  bg-red-200 border-red-300 hover:shadow-lg hover:transition-all hover:duration-5s'>
-            <img src={designImg} alt="Development" />
+          <div className="p-6">
+            <h1 className="italic font-bold text-4xl font-serif mb-4">Designer</h1>
+            <p className="mb-4">Logo Design, UI/UX Design, and application design expertise to create visually stunning and intuitively functional interfaces.</p>
           </div>
-
         </div>
 
-        {/*vedio Editor */}
-
-        <div className="w-20% h-50% justify-center text-center m-9 bg-white text-red-400 mx-48 space-y-3 align-middle pt-6 flex rounded-2xl hover:shadow-lg hover:transition-all hover:duration-5s">
-
-          <div>
-            <h1 className="italic font-bold bd-red-100 text-4xl font-serif ">Vedio Editor</h1>
-            <p className='m-5'>Video Editing,Expertise in creating visually appealing video content that captures attention. I have the capacity to increase your views by making mesmerizing vedios. As a meticulous editor with a keen eye for detail, I will transform your manuscript into a polished , compelling masterpiece that resonates with your audience and stands out in the marketplace</p>
-
+        {/* Video Editor */}
+        <div className="bg-white text-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+          <div className="h-64 bg-slate-200 rounded-t-2xl overflow-hidden">
+            <img src={EditImg} alt="Video Editor" className="w-full h-full object-cover" />
           </div>
-          <div className='w-full h-full bg-red-200 my-14  border-red-300 hover:shadow-lg hover:transition-all hover:duration-5s'>
-            <img src={EditImg} alt="Development" />
+          <div className="p-6">
+            <h1 className="italic font-bold text-4xl font-serif mb-4">Video Editor</h1>
+            <p className="mb-4">Video Editing, expertise in creating visually appealing video content that captures attention and increases viewer engagement.</p>
           </div>
-
         </div>
-
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default About
+export default About;
